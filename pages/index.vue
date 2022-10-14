@@ -1,13 +1,11 @@
 <template>
   <section class="container">
     <div>
-      <p>Hello World!</p>
+      <p>{{ $store.state.message }}</p>
     </div>
   </section>
 </template>
 
 <script>
-
-export default {
-}
+export default {};
 </script>
