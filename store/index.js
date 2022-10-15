@@ -7,9 +7,8 @@ const createStore = () => {
       };
     },
     mutations: {
-      updateMessage: function (state) {
-        let message = state.message === "Updated" ? "Hello Vuex" : "Updated";
-        state.message = message;
+      updateMessage: function (state, payload) {
+        state.message = payload;
       },
     },
   });
