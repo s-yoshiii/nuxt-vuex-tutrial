@@ -11,6 +11,11 @@ const createStore = () => {
         state.message = payload;
       },
     },
+    actions: {
+      updateMessageAction(context, payload) {
+        context.commit("updateMessage", payload);
+      },
+    },
   });
 };
 export default createStore;

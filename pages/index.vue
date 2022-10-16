@@ -3,9 +3,11 @@
     <div>
       <p>{{ $store.state.message }}</p>
       <button
-        v-on:click="$store.commit('updateMessage', 'Commit with payload')"
+        v-on:click="
+          $store.dispatch('updateMessageAction', 'Dispatch with payload')
+        "
       >
-        Update
+        Dispatch
       </button>
     </div>
   </section>
