@@ -17,10 +17,23 @@
       >
         Dispatch
       </button>
+      <Counter></Counter>
+      <hr />
+      <Counter></Counter>
+      <hr />
+      <Counter></Counter>
+      <hr />
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import Counter from "~/components/Counter.vue";
+
+export default {
+  comments: {
+    Counter,
+  },
+  components: { Counter },
+};
 </script>
