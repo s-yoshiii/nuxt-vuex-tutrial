@@ -4,6 +4,6 @@ export const state = () => ({
 
 export const mutations = {
   countUp: function (state) {
-    state.countr++;
+    state.counter++;
   },
 };
