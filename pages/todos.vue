@@ -7,7 +7,9 @@
           v-bind:checked="todo.done"
           @change="toggle(todo)"
         />
-        {{ todo.name }} {{ todo.create }}
+        <span v-bind:class="{ done: todo.done }"
+          >{{ todo.name }} {{ todo.create }}</span
+        >
         <button type="button" v-on:click="remove(todo.id)">Delete</button>
       </li>
     </ul>
@@ -49,4 +51,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+li > span.done {
+  text-decoration: line-through;
+}
+</style>
