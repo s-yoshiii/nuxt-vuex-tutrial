@@ -1,6 +1,11 @@
 <template>
   <div class="form">
-    {{ todos }}
+    <!-- {{ todos }} -->
+    <ul>
+      <li v-for="todo in todos" :key="todo.id">
+        {{ todo.done }} {{ todo.name }} {{ todo.create }}
+      </li>
+    </ul>
     <form v-on:submit.prevent="add">
       <input type="text" v-model="name" />
       <button type="submit">Add</button>
